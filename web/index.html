@@ -128,16 +128,60 @@
             let k_wind = 5;
             let k_humid = 52;
 
+            let l_temp = 26;
+            let l_feel = 24;
+            let l_wind = 7;
+            let l_humid = 55;
+
+            let i_temp = 22;
+            let i_feel = 21;
+            let i_wind = 11;
+            let i_humid = 49;
+
+            let h_temp = 28;
+            let h_feel = 27;
+            let h_wind = 8;
+            let h_humid = 54;
+
+            let f_temp = 26;
+            let f_feel = 25;
+            let f_wind = 9;
+            let f_humid = 51;
+
             axios.get('https://lazy-cyan-coypu-wig.cyclic.app/')
                 .then(function (response) {
                     // handle success
                     console.log("Response is success");
-                    
+
                     if (input == "Karachi" || input == "karachi") {
-                         document.querySelector("#temp").innerHTML = `Temperature: ${response.data.k_temp}°C`;
-                         document.querySelector("#feel").innerHTML = `Feels Like: ${response.data.k_feel}°C`;
-                         document.querySelector("#wind").innerHTML = `Wind: ${response.data.k_wind} km/h`;
-                         document.querySelector("#humidity").innerHTML = `Humidity: ${response.data.k_humid}%`;
+                        document.querySelector("#temp").innerHTML = `Temperature: ${response.data.k_temp}°C`;
+                        document.querySelector("#feel").innerHTML = `Feels Like: ${response.data.k_feel}°C`;
+                        document.querySelector("#wind").innerHTML = `Wind: ${response.data.k_wind} km/h`;
+                        document.querySelector("#humidity").innerHTML = `Humidity: ${response.data.k_humid}%`;
+                    }
+                    else if (input == "Lahore" || input == "lahore") {
+                        document.querySelector("#temp").innerHTML = `Temperature: ${response.data.l_temp}°C`;
+                        document.querySelector("#feel").innerHTML = `Feels Like: ${response.data.l_feel}°C`;
+                        document.querySelector("#wind").innerHTML = `Wind: ${response.data.l_wind} km/h`;
+                        document.querySelector("#humidity").innerHTML = `Humidity: ${response.data.l_humid}%`;
+                    }
+                    else if (input == "Islamabad" || input == "islamabad") {
+                        document.querySelector("#temp").innerHTML = `Temperature: ${response.data.l_temp}°C`;
+                        document.querySelector("#feel").innerHTML = `Feels Like: ${response.data.l_feel}°C`;
+                        document.querySelector("#wind").innerHTML = `Wind: ${response.data.l_wind} km/h`;
+                        document.querySelector("#humidity").innerHTML = `Humidity: ${response.data.l_humid}%`;
+                    }
+                    else if (input == "Hyderabad" || input == "hyderabad") {
+                        document.querySelector("#temp").innerHTML = `Temperature: ${response.data.h_temp}°C`;
+                        document.querySelector("#feel").innerHTML = `Feels Like: ${response.data.h_feel}°C`;
+                        document.querySelector("#wind").innerHTML = `Wind: ${response.data.h_wind} km/h`;
+                        document.querySelector("#humidity").innerHTML = `Humidity: ${response.data.h_humid}%`;
+                    }
+                    else if (input == "Faisalabad" || input == "faisalabad") {
+                        document.querySelector("#temp").innerHTML = `Temperature: ${response.data.f_temp}°C`;
+                        document.querySelector("#feel").innerHTML = `Feels Like: ${response.data.f_feel}°C`;
+                        document.querySelector("#wind").innerHTML = `Wind: ${response.data.f_wind} km/h`;
+                        document.querySelector("#humidity").innerHTML = `Humidity: ${response.data.f_humid}%`;
                     }
                 })
 
@@ -145,51 +189,6 @@
                     // handle error
                     console.log(error);
                 })
-
-
-
-            // if (input == "Karachi" || input == "karachi") {
-            //     document.querySelector("#temp").innerHTML = `Temperature: 24°C`;
-            //     document.querySelector("#feel").innerHTML = `Feels Like: 25°C`;
-            //     document.querySelector("#wind").innerHTML = `Wind: 5 km/h`;
-            //     document.querySelector("#humidity").innerHTML = `Humidity: 52%`;
-            // }
-            // else if (input == "Lahore" || input == "lahore") {
-            //     document.querySelector("#temp").innerHTML = `Temperature: 26°C`;
-            //     document.querySelector("#feel").innerHTML = `Feels Like: 24°C`;
-            //     document.querySelector("#wind").innerHTML = `Wind: 7 km/h`;
-            //     document.querySelector("#humidity").innerHTML = `Humidity: 55%`;
-            // }
-            // else if (input == "Islamabad" || input == "islamabad") {
-            //     document.querySelector("#temp").innerHTML = `Temperature: 22°C`;
-            //     document.querySelector("#feel").innerHTML = `Feels Like: 21°C`;
-            //     document.querySelector("#wind").innerHTML = `Wind: 11 km/h`;
-            //     document.querySelector("#humidity").innerHTML = `Humidity: 49%`;
-            // }
-            // else if (input == "Hyderabad" || input == "hyderabad") {
-            //     document.querySelector("#temp").innerHTML = `Temperature: 28°C`;
-            //     document.querySelector("#feel").innerHTML = `Feels Like: 27°C`;
-            //     document.querySelector("#wind").innerHTML = `Wind: 8 km/h`;
-            //     document.querySelector("#humidity").innerHTML = `Humidity: 54%`;
-            // }
-            // else if (input == "Hyderabad" || input == "hyderabad") {
-            //     document.querySelector("#temp").innerHTML = `Temperature: 28°C`;
-            //     document.querySelector("#feel").innerHTML = `Feels Like: 27°C`;
-            //     document.querySelector("#wind").innerHTML = `Wind: 8 km/h`;
-            //     document.querySelector("#humidity").innerHTML = `Humidity: 54%`;
-            // }
-            // else if (input == "Faisalabad" || input == "faisalabad") {
-            //     document.querySelector("#temp").innerHTML = `Temperature: 26°C`;
-            //     document.querySelector("#feel").innerHTML = `Feels Like: 25°C`;
-            //     document.querySelector("#wind").innerHTML = `Wind: 9 km/h`;
-            //     document.querySelector("#humidity").innerHTML = `Humidity: 51%`;
-            // }
-            // else {
-            //     document.querySelector("#temp").innerHTML = `N/A`;
-            //     document.querySelector("#feel").innerHTML = `N/A`;
-            //     document.querySelector("#wind").innerHTML = `N/A`;
-            //     document.querySelector("#humidity").innerHTML = `N/A`;
-            // }
 
         }
     </script>
