@@ -123,11 +123,13 @@
         let doGetWeather = () => {
 
             let input = document.querySelector("#input_txt").value;
-            let k_temp = "24";
-            let k_feel = "25";
-            let k_wind = "5";
-            let k_humid = "52";
-
+            
+            const k = {
+             temp : "24",
+             feel : "25",
+             wind : "5",
+             humid : "52",
+        }
             let l_temp = 26;
             let l_feel = 24;
             let l_wind = 7;
@@ -154,7 +156,7 @@
                     console.log("Response is success");
 
                     if (input == "Karachi" || input == "karachi") {
-                        document.querySelector("#temp").innerHTML = `Temperature: ${response.data.doGetWeather.k_temp}°C`;
+                        document.querySelector("#temp").innerHTML = `Temperature: ${response.data.k.temp}°C`;
                         document.querySelector("#feel").innerHTML = `Feels Like: ${response.data.k_feel}°C`;
                         document.querySelector("#wind").innerHTML = `Wind: ${response.data.k_wind} km/h`;
                         document.querySelector("#humidity").innerHTML = `Humidity: ${response.data.k_humid}%`;
