@@ -156,7 +156,7 @@
                     console.log("Response is success");
 
                     if (input == "Karachi" || input == "karachi") {
-                        document.querySelector("#temp").innerHTML = `Temperature: ${response.data.k.temp}°C`;
+                        document.querySelector("#temp").innerHTML = `Temperature: ${response.data.k_temp}°C`;
                         document.querySelector("#feel").innerHTML = `Feels Like: ${response.data.k_feel}°C`;
                         document.querySelector("#wind").innerHTML = `Wind: ${response.data.k_wind} km/h`;
                         document.querySelector("#humidity").innerHTML = `Humidity: ${response.data.k_humid}%`;
