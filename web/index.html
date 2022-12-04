@@ -132,7 +132,6 @@
                 .then(function (response) {
                     // handle success
                     console.log("Response is success");
-                    console.log(response.data);
                     
                     if (input == "Karachi" || input == "karachi") {
                          document.querySelector("#temp").innerHTML = `${response.data.k_temp}`;
