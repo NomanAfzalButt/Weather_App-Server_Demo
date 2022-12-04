@@ -117,7 +117,7 @@
         </div>
     </div>
 
-    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <script>
         let doGetWeather = () => {
@@ -132,7 +132,7 @@
                 .then(function (response) {
                     // handle success
                     console.log("Response is success");
-                    console.log(response.data.k_temp);
+                    console.log(response.data);
                     
                     if (input == "Karachi" || input == "karachi") {
                          document.querySelector("#temp").innerHTML = `${response.data.k_temp}`;
