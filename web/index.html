@@ -116,14 +116,14 @@
     </div>
 </div>
     
-    <script src="https://lazy-cyan-coypu-wig.cyclic.app/"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <script>
         let doGetWeather = () => {
 
             let input = document.querySelector("#input_txt").value;
 
-            axios.get('')
+            axios.get('https://lazy-cyan-coypu-wig.cyclic.app/')
                 .then(function (response) {
                     // handle success
                     console.log("Response is success");
