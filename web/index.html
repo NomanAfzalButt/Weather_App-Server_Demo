@@ -123,10 +123,10 @@
         let doGetWeather = () => {
 
             let input = document.querySelector("#input_txt").value;
-            let k_temp = "Temperature: 24°C";
-            let k_feel = "Feels Like: 25°C";
-            let k_wind = "Wind: 5 km/h";
-            let k_humid = "Humidity: 52%";
+            let k_temp = 24;
+            let k_feel = 25;
+            let k_wind = 5;
+            let k_humid = 52;
 
             axios.get('https://lazy-cyan-coypu-wig.cyclic.app/')
                 .then(function (response) {
@@ -134,10 +134,10 @@
                     console.log("Response is success");
                     
                     if (input == "Karachi" || input == "karachi") {
-                         document.querySelector("#temp").innerHTML = `${response.data.k_temp}`;
-                         document.querySelector("#feel").innerHTML = `${response.data.k_feel}`;
-                         document.querySelector("#wind").innerHTML = `${response.data.k_wind}`;
-                         document.querySelector("#humidity").innerHTML = `${response.data.k_humid}`;
+                         document.querySelector("#temp").innerHTML = `Temperature: ${response.data.k_temp}°C`;
+                         document.querySelector("#feel").innerHTML = `Feels Like: ${response.data.k_feel}°C`;
+                         document.querySelector("#wind").innerHTML = `Wind: ${response.data.k_wind} km/h`;
+                         document.querySelector("#humidity").innerHTML = `Humidity: ${response.data.k_humid}%`;
                     }
                 })
 
