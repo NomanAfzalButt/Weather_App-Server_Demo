@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>WEATHER APP</h1>
+    <form onsubmit="doGetWeather(); return false">
+        <label for="Search">Search</label> <input type="text" id="input_txt" placeholder="Enter City Name">
+        <button type="submit">Get Weather</button>
+    </form>
+
+    <div>
+        <h3 id="temp"></h3>
+        <h3 id="feel"></h3>
+        <h3 id="wind"></h3>
+        <h3 id="humidity"></h3>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script>
+        let doGetWeather = () => {
+
+            let input = document.querySelector("#input_txt").value;
+
+            axios.get('https://abcapp.cyclic.app/weather')
+                .then(function (response) {
+                    // handle success
+                    console.log("Response is success");
+                    console.log(response.data);
+                })
+                .catch(function (error) {
+                    // handle error
+                    console.log(error);
+                })
+
+            if (input == "Karachi" || input == "karachi") {
+                document.querySelector("#temp").innerHTML = `Temperature: 24°C`;
+                document.querySelector("#feel").innerHTML = `Feels Like: 25°C`;
+                document.querySelector("#wind").innerHTML = `Wind: 5 km/h`;
+                document.querySelector("#humidity").innerHTML = `Humidity: 52%`;
+            }
+            else if (input == "Lahore" || input == "lahore") {
+                document.querySelector("#temp").innerHTML = `Temperature: 26°C`;
+                document.querySelector("#feel").innerHTML = `Feels Like: 24°C`;
+                document.querySelector("#wind").innerHTML = `Wind: 7 km/h`;
+                document.querySelector("#humidity").innerHTML = `Humidity: 55%`;
+            }
+            else if (input == "Islamabad" || input == "islamabad") {
+                document.querySelector("#temp").innerHTML = `Temperature: 22°C`;
+                document.querySelector("#feel").innerHTML = `Feels Like: 21°C`;
+                document.querySelector("#wind").innerHTML = `Wind: 11 km/h`;
+                document.querySelector("#humidity").innerHTML = `Humidity: 49%`;
+            }
+            else if (input == "Hyderabad" || input == "hyderabad") {
+                document.querySelector("#temp").innerHTML = `Temperature: 28°C`;
+                document.querySelector("#feel").innerHTML = `Feels Like: 27°C`;
+                document.querySelector("#wind").innerHTML = `Wind: 8 km/h`;
+                document.querySelector("#humidity").innerHTML = `Humidity: 54%`;
+            }
+            else if (input == "Hyderabad" || input == "hyderabad") {
+                document.querySelector("#temp").innerHTML = `Temperature: 28°C`;
+                document.querySelector("#feel").innerHTML = `Feels Like: 27°C`;
+                document.querySelector("#wind").innerHTML = `Wind: 8 km/h`;
+                document.querySelector("#humidity").innerHTML = `Humidity: 54%`;
+            }
+            else if (input == "Faisalabad" || input == "faisalabad") {
+                document.querySelector("#temp").innerHTML = `Temperature: 26°C`;
+                document.querySelector("#feel").innerHTML = `Feels Like: 25°C`;
+                document.querySelector("#wind").innerHTML = `Wind: 9 km/h`;
+                document.querySelector("#humidity").innerHTML = `Humidity: 51%`;
+            }
+            else {
+                document.querySelector("#temp").innerHTML = `N/A`;
+                document.querySelector("#feel").innerHTML = `N/A`;
+                document.querySelector("#wind").innerHTML = `N/A`;
+                document.querySelector("#humidity").innerHTML = `N/A`;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
